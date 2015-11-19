@@ -40,21 +40,12 @@ html, body {
   width: $size - 2 * $border-size;
   background-color: lighten($elevator-color, 20);
 
-<<<<<<< HEAD
-  .elevator-doors {
-    transition: width 0.5s ease-in-out;
-=======
   .elevator-door {
     transition: right 0.5s ease-in-out, left 0.5s ease-in-out;
->>>>>>> master
     background-color: $door-color;
     position: absolute;
     top: 0;
     border: $border-size solid darken($door-color, 10);
-<<<<<<< HEAD
-    width: $size - 4 * $border-size;
-    height: $size - 4 * $border-size;
-=======
     width: ($size - 4 * $border-size) / 2;
     height: $size - 4 * $border-size;
   }
@@ -63,7 +54,6 @@ html, body {
     left: 0;
   }
   .elevator-door-right {
->>>>>>> master
     right: 0;
   }
 }
@@ -71,16 +61,11 @@ html, body {
 .elevator-idle {
   background-color: darken($elevator-color, 20);
 
-<<<<<<< HEAD
-  .elevator-doors {
-    width: 0;
-=======
   .elevator-door-left {
     left: - $size / 2;
   }
   .elevator-door-right {
     right: - $size / 2;
->>>>>>> master
   }
 }
 

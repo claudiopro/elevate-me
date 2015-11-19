@@ -18,25 +18,31 @@ html, body {
 .elevator {
   transition: top 1s ease-in-out, background-color 0.2s ease-out;
   position: absolute;
+  overflow: hidden;
   top: 0;
   border: 4px solid blue;
   height: 142px;
   width: 142px;
   background-color: #6666ff; }
-  .elevator .elevator-doors {
-    transition: width 0.5s ease-in-out;
+  .elevator .elevator-door {
+    transition: right 0.5s ease-in-out, left 0.5s ease-in-out;
     background-color: green;
     position: absolute;
     top: 0;
     border: 4px solid #004d00;
-    width: 134px;
-    height: 134px;
+    width: 67px;
+    height: 134px; }
+  .elevator .elevator-door-left {
+    left: 0; }
+  .elevator .elevator-door-right {
     right: 0; }
 
 .elevator-idle {
   background-color: #000099; }
-  .elevator-idle .elevator-doors {
-    width: 0; }
+  .elevator-idle .elevator-door-left {
+    left: -75px; }
+  .elevator-idle .elevator-door-right {
+    right: -75px; }
 
 button {
   min-width: 30px;
