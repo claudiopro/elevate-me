@@ -6,22 +6,29 @@
   </head>
   <body>
     <div class="building">
-      <div class="elevator-well">
-        <div class="elevator elevator-idle elevator-floor-0">
-          <button data-floor="3">3</button>
-          <button data-floor="2">2</button>
-          <button data-floor="1">1</button>
-          <button data-floor="0">G</button>
-          <button data-floor="-1">B</button>
-          <div class="elevator-door elevator-door-left"></div>
-          <div class="elevator-door elevator-door-right"></div>
+      <div class="floor floor-3"></div>
+      <div class="floor floor-2"></div>
+      <div class="floor floor-1"></div>
+      <div class="floor floor-0"></div>
+      <div class="floor floor--1"></div>
+      <div class="wall">
+        <div class="elevator-well">
+          <div class="elevator elevator-idle elevator-floor-0">
+            <button data-floor="3">3</button>
+            <button data-floor="2">2</button>
+            <button data-floor="1">1</button>
+            <button data-floor="0">G</button>
+            <button data-floor="-1">B</button>
+            <div class="elevator-door elevator-door-left"></div>
+            <div class="elevator-door elevator-door-right"></div>
+          </div>
         </div>
+        <button data-floor="3" class="floor-3">Call</button>
+        <button data-floor="2" class="floor-2">Call</button>
+        <button data-floor="1" class="floor-1">Call</button>
+        <button data-floor="0" class="floor-0">Call</button>
+        <button data-floor="-1" class="floor--1">Call</button>
       </div>
-      <button data-floor="3" class="floor-3">Call</button>
-      <button data-floor="2" class="floor-2">Call</button>
-      <button data-floor="1" class="floor-1">Call</button>
-      <button data-floor="0" class="floor-0">Call</button>
-      <button data-floor="-1" class="floor--1">Call</button>
     </div>
     <textarea class="debug"></textarea>
     <script src="dist/js/bundle.js"></script>
