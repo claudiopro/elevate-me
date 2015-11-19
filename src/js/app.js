@@ -1,23 +1,6 @@
 var Elevator = require('./elevator'),
   classnames = require('classnames/dedupe');
 
-/**
- *  Updates the floor display
- *  @param {Number} floor Floor number
- *  @param {Boolean} [booked] True if the elevator is booked for this floor
- */
-function display(floor, booked) {
-  var buttons = document.querySelectorAll('button');
-  for (var i = 0; i < buttons.length; i++) {
-    var fl = buttons[i].getAttribute('data-floor');
-    if (fl === floor) {
-      buttons[i].className = classnames(buttons[i].className.split(' '), {
-        'booked': booked
-      });
-    }
-  }
-}
-
 // Attaches behavior on window loaded
 window.onload = function() {
 
@@ -31,6 +14,24 @@ window.onload = function() {
     elevator.call(floor);
     // Update floor display
     display(floor, true);
+  }
+
+  /**
+   *  Updates the floor display
+   *  @param {Number} floor Floor number
+   *  @param {Boolean} [booked] True if the elevator is booked for this floor
+   */
+  function display(floor, booked) {
+    var buttons = document.querySelectorAll('button');
+    for (var i = 0; i < buttons.length; i++) {
+      var fl = buttons[i].getAttribute('data-floor');
+      if (fl === floor) {
+        buttons[i].className = classnames(buttons[i].className.split(' '), {
+          'booked': booked
+        });
+      }
+    }
+    document.querySelector('textarea').value += elevator.toString() + '\n';
   }
 
   // Instantiates an elevator
