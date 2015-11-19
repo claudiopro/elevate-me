@@ -86,6 +86,16 @@ describe('the Elevator class', function() {
         done();
       }, 1100);
     });
+
+    it('emits the idle event', function(done) {
+      elevator.state = Elevator.MOVING;
+      elevator.floor = 1;
+      elevator.on('idle', function(floor) {
+        expect(floor).to.equal(1);
+        done();
+      });
+      elevator.stop();
+    });
   });
 
   describe('the move() method', function() {
@@ -138,6 +148,29 @@ describe('the Elevator class', function() {
       elevator.queue = [1];
       elevator.move();
       expect(elevator.direction).to.equal(Elevator.DOWN);
+    });
+
+    it('emits the idle event when next floor is the same', function(done) {
+      elevator.floor = 1;
+      elevator.queue = [1];
+      elevator.state = Elevator.IDLE;
+      elevator.on('idle', function(floor) {
+        expect(floor).to.equal(1);
+        done();
+      });
+      elevator.move();
+    });
+
+    it('emits the moving event when next floor is different', function(done) {
+      elevator.floor = 1;
+      elevator.queue = [2];
+      elevator.state = Elevator.IDLE;
+      elevator.on('moving', function(floor, direction) {
+        expect(floor).to.equal(2);
+        expect(direction).to.equal(Elevator.UP);
+        done();
+      });
+      elevator.move();
     });
   });
 
