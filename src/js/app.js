@@ -17,6 +17,16 @@ window.onload = function() {
   }
 
   /**
+   *  Logs text in the textarea, keeping it scrolled
+   *  @param {String} text Text to log
+   */
+  function log(text) {
+    var textArea = document.querySelector('textarea');
+    textArea.value += text + '\n';
+    textArea.scrollTop = textArea.scrollHeight;
+  }
+
+  /**
    *  Updates the floor display
    *  @param {Number} floor Floor number
    *  @param {Boolean} [booked] True if the elevator is booked for this floor
@@ -31,7 +41,7 @@ window.onload = function() {
         });
       }
     }
-    document.querySelector('textarea').value += elevator.toString() + '\n';
+    log(elevator.toString());
   }
 
   // Instantiates an elevator
