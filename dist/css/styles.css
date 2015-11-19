@@ -3,6 +3,9 @@ html, body {
   padding: 0; }
 
 .building {
+  background-color: tan; }
+
+.wall {
   position: relative;
   width: 250px;
   margin: auto; }
@@ -11,9 +14,9 @@ html, body {
   width: 150px;
   height: 750px;
   margin: auto;
-  border-left: 4px solid red;
-  border-right: 4px solid red;
-  background-color: #990000; }
+  border-left: 4px solid maroon;
+  border-right: 4px solid maroon;
+  background-color: #340000; }
 
 .elevator {
   transition: top 1s ease-in-out, background-color 0.2s ease-out;
@@ -61,6 +64,14 @@ button.floor--1 {
   right: 0;
   top: 675px; }
 
+div.floor--1 {
+  width: 100%;
+  height: 146px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  background-color: #e0ccb1;
+  top: 600px; }
+
 .elevator-floor-0 {
   top: 450px; }
 
@@ -68,6 +79,14 @@ button.floor-0 {
   position: absolute;
   right: 0;
   top: 525px; }
+
+div.floor-0 {
+  width: 100%;
+  height: 146px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  background-color: #e8d8c3;
+  top: 450px; }
 
 .elevator-floor-1 {
   top: 300px; }
@@ -77,6 +96,14 @@ button.floor-1 {
   right: 0;
   top: 375px; }
 
+div.floor-1 {
+  width: 100%;
+  height: 146px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  background-color: #efe4d5;
+  top: 300px; }
+
 .elevator-floor-2 {
   top: 150px; }
 
@@ -84,6 +111,14 @@ button.floor-2 {
   position: absolute;
   right: 0;
   top: 225px; }
+
+div.floor-2 {
+  width: 100%;
+  height: 146px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  background-color: #f6f0e8;
+  top: 150px; }
 
 .elevator-floor-3 {
   top: 0px; }
@@ -93,9 +128,17 @@ button.floor-3 {
   right: 0;
   top: 75px; }
 
+div.floor-3 {
+  width: 100%;
+  height: 146px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  background-color: #fdfcfa;
+  top: 0px; }
+
 textarea {
   position: fixed;
   top: 20px;
   left: 20px;
   width: 32em;
-  height: 12em; }
+  height: 8em; }
