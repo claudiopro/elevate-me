@@ -1,0 +1,27 @@
+{
+  "name": "elevate-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "mocha -w"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.0",
+    "events": "^1.1.0",
+    "object-assign": "^4.0.1"
+  }
+}

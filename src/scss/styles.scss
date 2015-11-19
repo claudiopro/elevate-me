@@ -1,0 +1,64 @@
+$floors: 5;
+$size: 150px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.building {
+  position: relative;
+  width: $size + 100px;
+  margin: auto;
+}
+
+.elevator-well {
+  width: $size;
+  height: $floors * $size;
+  margin: auto;
+  border-left: 4px solid brown;
+  border-right: 4px solid brown;
+  background-color: darken(brown, 20);
+}
+
+.elevator {
+  transition: top 1s ease-in-out, background-color 0.2s ease-out;
+  position: absolute;
+  top: 0;
+  border: 4px solid blue;
+  height: $size - 2 * 4px;
+  width: $size - 2 * 4px;
+  background-color: lighten(blue, 20);
+}
+
+.elevator-idle {
+  background-color: darken(blue, 20);
+}
+
+button {
+  display: block;
+  
+  &.booked {
+    background-color: gold;
+  }
+}
+
+@for $i from -1 through 3 {
+  .elevator-floor-#{$i} {
+    top: ($floors - $i - 2) * $size;
+  }
+
+  button.floor-#{$i} {
+    position: absolute;
+    right: 0;
+    top: ($floors - $i - 2 + 0.5) * $size;
+  }
+}
+
+.elevator-idle {
+
+}
+
+.elevator-doors {
+
+}
