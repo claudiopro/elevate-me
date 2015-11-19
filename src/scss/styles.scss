@@ -2,10 +2,11 @@ $floors: 5;
 $size: 150px;
 $border-size: 4px;
 
-$well-color: red;
+$well-color: maroon;
 $elevator-color: blue;
 $booked-color: gold;
 $door-color: green;
+$building-bgcolor: tan;
 
 $button-border-color: black;
 $button-bgcolor: white;
@@ -16,6 +17,10 @@ html, body {
 }
 
 .building {
+  background-color: $building-bgcolor;
+}
+
+.wall {
   position: relative;
   width: $size + 100px;
   margin: auto;
@@ -27,7 +32,7 @@ html, body {
   margin: auto;
   border-left: $border-size solid $well-color;
   border-right: $border-size solid $well-color;
-  background-color: darken($well-color, 20);
+  background-color: darken($well-color, 15);
 }
 
 .elevator {
@@ -91,6 +96,15 @@ button {
     right: 0;
     top: ($floors - $i - 2 + 0.5) * $size;
   }
+
+  div.floor-#{$i} {
+    width: 100%;
+    height: $size - $border-size;
+    border-bottom: $border-size solid black;
+    position: absolute;
+    background-color: lighten($building-bgcolor, ($floors + $i - 2) * 5);
+    top: ($floors - $i - 2) * $size;
+  }
 }
 
 textarea {
@@ -98,5 +112,5 @@ textarea {
   top: 20px;
   left: 20px;
   width: 32em;
-  height: 12em;
+  height: 8em;
 }
