@@ -11,9 +11,9 @@ html, body {
   width: 150px;
   height: 750px;
   margin: auto;
-  border-left: 4px solid brown;
-  border-right: 4px solid brown;
-  background-color: #541515; }
+  border-left: 4px solid red;
+  border-right: 4px solid red;
+  background-color: #990000; }
 
 .elevator {
   transition: top 1s ease-in-out, background-color 0.2s ease-out;
@@ -28,6 +28,10 @@ html, body {
   background-color: #000099; }
 
 button {
+  min-width: 30px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 2px;
   display: block; }
   button.booked {
     background-color: gold; }
@@ -71,3 +75,10 @@ button.floor-3 {
   position: absolute;
   right: 0;
   top: 75px; }
+
+textarea {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 32em;
+  height: 12em; }
