@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/claudiopro/elevate-me.svg?branch=master)](https://travis-ci.org/claudiopro/elevate-me)
+
 # elevate-me
 
 Models an elevator with TDD
