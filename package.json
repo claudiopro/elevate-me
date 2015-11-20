@@ -1,14 +1,14 @@
 {
   "name": "elevate-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build Status](https://travis-ci.org/claudiopro/elevate-me.svg?branch=master)](https://travis-ci.org/claudiopro/elevate-me)",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "test": "mocha -w",
     "test-ci": "mocha"
   },
-  "author": "",
+  "author": "Claudio Procida",
   "license": "MIT",
   "devDependencies": {
     "browserify": "^12.0.1",
@@ -24,5 +24,21 @@
     "classnames": "^2.2.0",
     "events": "^1.1.0",
     "object-assign": "^4.0.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiopro/elevate-me.git"
+  },
+  "keywords": [
+    "elevator",
+    "bdd",
+    "tdd"
+  ],
+  "bugs": {
+    "url": "https://github.com/claudiopro/elevate-me/issues"
+  },
+  "homepage": "https://github.com/claudiopro/elevate-me#readme"
 }
